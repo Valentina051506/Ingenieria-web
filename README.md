@@ -1,6 +1,6 @@
 # Ingenieria-web---Guia-2
 
-Este proyecto presenta una página web básica desarrollada en **HTML5**, cuyo objetivo es aplicar correctamente la **estructura semántica**, siguiendo buenas prácticas de accesibilidad, organización del contenido y estándares web.
+Este proyecto presenta una página web básica desarrollada en HTML5, cuyo objetivo es aplicar correctamente la estructura semántica, siguiendo buenas prácticas de accesibilidad, organización del contenido y estándares web.
 
 ---
 
