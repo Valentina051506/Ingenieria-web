@@ -10,7 +10,7 @@ El proyecto contiene los siguientes archivos:
 
 - `index.html`: Archivo principal que contiene la estructura semántica completa del sitio.
 - `README.md`: Documento con las instrucciones de uso y explicación del proyecto.
-
+- `markdown-preview.pdf` : Documento de propositos y ventajas, y la importancia de la separacion entre el cliente y el servidor
 ---
 
 ## Cómo clonar el proyecto
