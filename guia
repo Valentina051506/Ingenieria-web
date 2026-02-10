@@ -1,214 +1,55 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Fundamentos de la Web Moderna</title>
+Preguntas Orientadoras
 
-  <!-- Fuente moderna -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+1. ¿Cuáles son los componentes esenciales de una aplicación web moderna y cómo se comunican?
 
-  <style>
-    :root{
-      --bg: #f3ecfa;
-      --card: #ffffff;
-      --muted: #6b5f82;
-      --accent: #7a42c5;
-      --accent-2: #b49dd8;
-      --text: #2b2640;
-      --radius: 12px;
-      --shadow: 0 8px 30px rgba(121,84,169,0.08);
-    }
+- Cliente(FrontEnd): Es lo que ve y usa el usuario, Tecnologías comunes: HTML, CSS y JavaScript, Se ejecuta en el navegador, Envía solicitudes al servidor (por ejemplo, cuando haces clic en un botón).
 
-    html,body{
-      margin:0;
-      padding:0;
-      font-family: "Inter", system-ui, Arial;
-      background: linear-gradient(180deg,var(--bg), #efe7fb 240px);
-      color:var(--text);
-      line-height:1.65;
-    }
+- Servidor(BackEnd): Procesa la lógica del negocio. Maneja autenticación, reglas, cálculos, etc. Tecnologías comunes: Java, Python, Node.js, PHP, entre otros.
 
-    .container{
-      max-width:1100px;
-      margin:32px auto;
-      padding:18px;
-    }
+- Base de datos: Almacena la información (usuarios, productos, mensajes, etc.). Ejemplos: MySQL, PostgreSQL, MongoDB.
 
-    header.top{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      background: linear-gradient(90deg,var(--accent-2),var(--accent));
-      color:#fff;
-      padding:22px;
-      border-radius:14px;
-      box-shadow:var(--shadow);
-    }
+- Comunicacion: Se comunican mediante HTTP/HTTPS. El cliente envía solicitudes (GET, POST, PUT, DELETE) y el servidor responde con datos (usualmente en JSON). Muchas apps usan APIs REST o GraphQL.
 
-    header h1{ margin:0; font-size:22px; }
-    .meta{ font-size:14px; opacity:0.95; }
+2. ¿Por qué es necesaria la separación de responsabilidades entre cliente y servidor?
 
-    main.layout{
-      display:grid;
-      grid-template-columns: 260px 1fr;
-      gap:22px;
-      margin-top:20px;
-    }
+Porque hace el sistema más organizado, seguro y escalable:
 
-    aside.toc{
-      background:var(--card);
-      border-radius:12px;
-      padding:14px;
-      box-shadow:var(--shadow);
-      height:fit-content;
-    }
-    .toc h3{ margin-top:0; color:var(--muted); }
-    .toc a{ display:block; color:var(--accent); text-decoration:none; padding:6px 0; }
-    .toc a:hover{ text-decoration:underline; }
+- Mantenimiento sencillo: cambios en el frontend no afectan al backend y viceversa.
 
-    section.card{
-      background:var(--card);
-      border-radius:12px;
-      padding:22px;
-      box-shadow:var(--shadow);
-      border-left:8px solid var(--accent-2);
-      margin-bottom:18px;
-    }
+- Seguridad: la lógica crítica y los datos sensibles quedan en el servidor.
 
-    section.card h2{ margin-top:0; color:var(--accent); }
-    p{ text-align:justify; }
+- Escalabilidad: se pueden manejar más usuarios sin rehacer todo.
 
-    footer{
-      margin:28px 0;
-      text-align:center;
-      color:var(--muted);
-      font-size:13px;
-    }
+- Reutilización: un mismo backend puede servir a web, móvil o escritorio.
 
-    @media (max-width:900px){
-      main.layout{ grid-template-columns:1fr; }
-    }
-  </style>
-</head>
+- Trabajo en equipo: frontend y backend pueden desarrollarse en paralelo.
 
-<body>
-  <div class="container">
+3. ¿Cómo facilita HTML5 la creación de contenido web estructurado y accesible?
 
-    <!-- HEADER -->
-    <header class="top">
-      <div>
-        <h1>Fundamentos de la Web Moderna</h1>
-        <div class="meta">
-          Ingeniería Web
-        </div>
-      </div>
-    </header>
+HTML5 introduce mejoras que hacen la web más clara y usable
 
-    <main class="layout">
+- Permite organizar el contenido con significado, no solo visual
 
-      <!-- ASIDE -->
-      <aside class="toc">
-        <h3>Contenido</h3>
-        <a href="#ingenieria">Ingeniería Web</a>
-        <a href="#cliente-servidor">Arquitectura Cliente-Servidor</a>
-        <a href="#semantica">Semántica y Accesibilidad</a>
-        <a href="#recursos">Recursos Recomendados</a>
-        <a href="#reflexion">Reflexión Final</a>
-      </aside>
+- Mejora la lectura del código para humanos y máquinas.
 
-      <!-- CONTENIDO -->
-      <div>
+- Facilita que lectores de pantalla interpreten mejor el contenido.
 
-        <section id="ingenieria" class="card">
-          <h2>Introducción a la Ingeniería Web</h2>
-          <p>
-            La ingeniería web es una disciplina que aplica principios de la ingeniería
-            de software al desarrollo de aplicaciones y sitios web. Su objetivo principal
-            es garantizar que los sistemas web sean escalables, seguros, accesibles y
-            fáciles de mantener a lo largo del tiempo.
-          </p>
-          <p>
-            A diferencia del desarrollo web tradicional, la ingeniería web considera
-            aspectos como el ciclo de vida del software, la experiencia de usuario,
-            la interoperabilidad y el trabajo colaborativo entre equipos multidisciplinarios.
-          </p>
-        </section>
+- Mejora la experiencia para personas con discapacidades
 
-        <section id="cliente-servidor" class="card">
-          <h2>Arquitectura Cliente-Servidor</h2>
-          <p>
-            La arquitectura cliente-servidor es el modelo fundamental sobre el cual
-            funciona la web moderna. En este esquema, el cliente (generalmente un
-            navegador web) realiza solicitudes a un servidor, el cual procesa la
-            información y responde con los datos solicitados.
-          </p>
-          <p>
-            Esta separación de responsabilidades permite mejorar la seguridad,
-            el rendimiento y la escalabilidad de las aplicaciones web.
-            Tecnologías como HTTP, APIs REST y servicios en la nube se basan
-            directamente en este modelo.
-          </p>
-        </section>
+- Soporte para audio, video, formularios avanzados.
 
-        <section id="semantica" class="card">
-          <h2>Importancia de la Semántica y el Diseño Accesible</h2>
-          <p>
-            El uso de etiquetas semánticas en HTML5 como
-            <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>,
-            <code>&lt;article&gt;</code> y <code>&lt;footer&gt;</code>
-            permite dar significado al contenido, facilitando su comprensión
-            tanto para personas como para motores de búsqueda.
-          </p>
-          <p>
-            Un diseño accesible garantiza que usuarios con discapacidades
-            puedan interactuar con el contenido web mediante lectores de pantalla
-            u otras tecnologías asistivas, promoviendo la inclusión digital.
-          </p>
-        </section>
+- Mejor integración con dispositivos móviles.
 
-        <section id="recursos" class="card">
-          <h2>Recursos Recomendados</h2>
-          <ul>
-            <li>
-              <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noopener">
-                Documentación HTML5 – MDN Web Docs
-              </a>
-            </li>
-            <li>
-              <a href="https://www.w3.org/TR/html52/" target="_blank" rel="noopener">
-                Especificación HTML – W3C
-              </a>
-            </li>
-            <li>
-              <a href="https://www.w3.org/WAI/" target="_blank" rel="noopener">
-                Iniciativa de Accesibilidad Web (WAI)
-              </a>
-            </li>
-          </ul>
-        </section>
+4. ¿Qué ventajas aporta el uso de etiquetas semánticas frente a las tradicionales (como div)
 
-        <section id="reflexion" class="card">
-          <h2>Reflexión en Equipo</h2>
-          <p>
-            Organizar los contenidos de forma semántica facilita el trabajo colaborativo
-            porque cada integrante del equipo entiende rápidamente la función de cada
-            sección del código. Además, mejora el mantenimiento del sitio, ya que
-            permite realizar cambios sin afectar otras partes del sistema.
-          </p>
-          <ul>
-            <li>Mejor legibilidad y organización del código.</li>
-            <li>Mayor accesibilidad para todos los usuarios.</li>
-            <li>Compatibilidad con estándares y motores de búsqueda.</li>
-          </ul>
-        </section>
+- Las etiquetas semánticas describen el propósito del contenido, no solo su forma.
 
-        <footer>
-          © 2026 • Fundamentos de la Web Moderna • Organización Educativa
-        </footer>
+<header>, <nav>, <main>, <section>, <article>, <footer>
 
-      </div>
-    </main>
-  </div>
-</body>
-</html>
+- Mejor SEO: los buscadores entienden mejor la página.
+
+- Mayor accesibilidad: los lectores de pantalla identifican secciones clave.
+
+- Código más legible y mantenible.
+
+- Estandarización: otros desarrolladores entienden rápido la estructura.
