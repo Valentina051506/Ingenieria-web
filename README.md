@@ -22,6 +22,7 @@ Este archivo contiene la especificación de los requisitos del sistema e incluye
 En esta etapa se detallan las funcionalidades que debe cumplir la aplicación y las características de calidad que debe garantizar.
 
 Ambas estapas se encuentran dentro de la carpeta /docs/etapa-1-y-2.pdf. Por otro lado tambien encontramos los diagramas de casos de uso, de secuencia y de clases dentro de la carpeta /diagrams
+
 ---
 
 ## Contenido del Proyecto
