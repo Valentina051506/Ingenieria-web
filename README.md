@@ -1,40 +1,46 @@
 # Ingeniería Web – Sistema de Gestión de Conflictos Familiares
 
-Este repositorio contiene el desarrollo del proyecto académico de la asignatura **Ingeniería Web**, cuyo objetivo es diseñar y documentar una aplicación web orientada a la gestión de conflictos familiares dentro de un grupo familiar.
+Este repositorio contiene el desarrollo del proyecto académico de la asignatura **Ingeniería Web**, cuyo objetivo es diseñar, documentar y estructurar una aplicación web orientada a la gestión de conflictos dentro de un grupo familiar.
 
 El sistema busca mejorar la comunicación entre los miembros del hogar mediante el registro estructurado de desacuerdos, propuestas de solución y toma de decisiones colaborativas.
 
 ---
 
-# Descripción del Proyecto
+# Descripción General del Proyecto
 
 La aplicación permitirá:
 
-- Registrar usuarios.
-- Crear grupos familiares.
+- Registrar y autenticar usuarios.
+- Crear y gestionar grupos familiares.
 - Registrar desacuerdos.
 - Proponer soluciones.
 - Aceptar o rechazar propuestas.
 - Consultar el historial de conflictos.
 - Gestionar el estado de cada desacuerdo.
 
-El proyecto se desarrolla siguiendo buenas prácticas de ingeniería de software, aplicando:
-
-- Arquitectura en capas.
-- Principios SOLID.
-- Separación cliente-servidor.
-- Documentación estructurada por etapas.
+El desarrollo se realiza aplicando buenas prácticas de ingeniería de software, arquitectura web moderna y principios de diseño orientados a bajo acoplamiento y alta cohesión.
 
 ---
 
-#  Arquitectura del Sistema
+# Arquitectura del Sistema
 
-El sistema se desarrolla bajo una **arquitectura en capas (Layered Architecture)**, lo que permite separar responsabilidades y cumplir con los requerimientos no funcionales del proyecto.
+El sistema se desarrolla bajo una **Arquitectura en Capas (Layered Architecture)**, que permite separar responsabilidades y cumplir con los requerimientos funcionales y no funcionales del proyecto.
 
-## Capas del sistema
+## Capas del Sistema
 
-### 1. Capa de Presentación
-Encargada de la interfaz de usuario y la interacción con los miembros del grupo familiar.
+### 1. Capa de Presentación (Frontend)
+
+Encargada de:
+
+- Interfaz gráfica.
+- Interacción con el usuario.
+- Validaciones básicas del lado cliente.
+- Manipulación del DOM mediante JavaScript.
+
+Tecnologías utilizadas:
+- HTML5 (estructura semántica)
+- CSS3 (presentación)
+- JavaScript (interactividad)
 
 Relacionada con:
 - RNF05 – Usabilidad
@@ -42,37 +48,84 @@ Relacionada con:
 
 ---
 
-### 2. Capa de Lógica de Negocio
-Contiene las reglas del sistema:
+### 2. Capa de Lógica de Negocio (Backend)
+
+Contiene:
+
 - Validación de credenciales.
-- Gestión de grupos.
-- Registro de desacuerdos.
-- Gestión de propuestas.
-- Control de permisos.
+- Gestión de permisos.
+- Reglas del sistema.
+- Procesamiento de solicitudes.
+- Control del flujo de estados de los desacuerdos.
 
 Relacionada con:
-- RNF01 – Seguridad y Autenticación
-- RNF04 – Tiempo de Respuesta
-- RNF09 – Principios SOLID
+- RNF01 – Seguridad
+- RNF04 – Tiempo de respuesta
+- RNF09 – Aplicación de principios SOLID
 
 ---
 
 ### 3. Capa de Acceso a Datos
-Gestiona la persistencia en la base de datos.
+
+Encargada de:
+
+- Persistencia de información.
+- Consultas estructuradas.
+- Protección de datos.
+- Integridad de la información.
 
 Relacionada con:
-- RNF02 – Protección de Datos
+- RNF02 – Protección de datos
 - RNF06 – Escalabilidad
 - RNF08 – Mantenibilidad
 
 ---
 
 ### 4. Base de Datos
-Almacena la información del sistema de forma estructurada y segura.
+
+Almacena:
+
+- Usuarios.
+- Grupos familiares.
+- Desacuerdos.
+- Propuestas.
+- Historial de decisiones.
 
 Relacionada con:
-- RNF02 – Protección de Datos
+- RNF02 – Protección de datos
 - RNF03 – Disponibilidad
+
+---
+
+# Uso del DOM en el Proyecto (Enfoque Lógico)
+
+El proyecto utiliza el DOM desde una perspectiva estructurada y alineada con buenas prácticas.
+
+##  Se utilizará:
+
+- `getElementById()`
+- `querySelector()`
+- `addEventListener()`
+- `classList`
+- `createElement()`
+- `appendChild()`
+- `textContent`
+- Validaciones dinámicas de formularios
+
+Justificación:
+Permite manipular la interfaz sin romper la separación entre estructura, estilo y comportamiento.
+
+---
+
+## No se utilizará:
+
+- Inline JavaScript (`onclick=""`)
+- `document.write()`
+- Uso excesivo de `innerHTML`
+- Manipulación directa sin validaciones
+
+Justificación:
+Evita acoplamiento, mejora seguridad y facilita mantenimiento.
 
 ---
 
@@ -81,42 +134,47 @@ Relacionada con:
 ##  Etapa 1 – Análisis del Problema
 
 Incluye:
+
 - Identificación del problema.
 - Usuarios del sistema.
 - Entrada – Proceso – Salida.
 - Alcance del sistema.
+- Justificación.
 
-Documento:  
+Documento:
 [`docs/etapa1 y 2.pdf`](docs/etapa1%20y%202.pdf)
 
 ---
 
-##  Etapa 2 – Requisitos del Sistema
-
-Incluye:
+## Etapa 2 – Requisitos del Sistema
 
 ###  Requerimientos Funcionales
 
 Definen qué debe hacer el sistema.
 
 Documento:
-[`docs/Requerimientos Funcionales.md`](docs/Requerimientos%20funcionales.md)
+[`docs/Requerimientos Funcionales.md`](docs/Requerimientos%20Funcionales.md)
 
 Incluyen:
-- Registro y autenticación de usuarios.
+
+- Registro y autenticación.
 - Gestión de grupos familiares.
 - Registro de desacuerdos.
 - Propuestas de solución.
-- Aceptación o rechazo de propuestas.
+- Gestión de estados.
 - Historial de conflictos.
 
 ---
 
-###  Requerimientos No Funcionales
+### Requerimientos No Funcionales
 
 Definen cómo debe comportarse el sistema.
 
+Documento:
+[`docs/Requerimientos No Funcionales.md`](docs/Requerimientos%20No%20Funcionales.md)
+
 Incluyen:
+
 - Seguridad.
 - Protección de datos.
 - Disponibilidad.
@@ -126,12 +184,23 @@ Incluyen:
 - Mantenibilidad.
 - Aplicación de principios SOLID.
 
-Documento específico:
-[`docs/Requerimientos No Funcionales.md`](docs/Requerimientos%20No%20Funcionales.md)
+---
+
+## Etapa 3 – Diseño y Arquitectura
+
+Incluye:
+
+- Diseño de arquitectura en capas.
+- Aplicación de principios SOLID.
+- Separación cliente-servidor.
+- Modelado mediante diagramas.
+- Justificación técnica del uso del DOM.
+
+En esta etapa se consolida la estructura lógica del sistema antes de su implementación completa.
 
 ---
 
-#  Diagramas
+# Diagramas
 
 En la carpeta `/diagrams` se encuentran:
 
@@ -139,21 +208,27 @@ En la carpeta `/diagrams` se encuentran:
 - Diagrama de Secuencia
 - Diagrama de Clases
 
+Estos diagramas representan la estructura lógica del sistema y su comportamiento dinámico.
+
 ---
 
 # Principios de Diseño Aplicados
 
-El proyecto aplica los principios SOLID:
+El proyecto aplica principios SOLID:
 
-- **SRP** – Responsabilidad Única  
-- **OCP** – Abierto/Cerrado  
-- **DIP** – Inversión de Dependencias  
+- **SRP (Single Responsibility Principle)**  
+  Cada módulo tiene una única responsabilidad.
 
-Esto permite:
+- **OCP (Open/Closed Principle)**  
+  El sistema puede extenderse sin modificar su estructura base.
+
+- **DIP (Dependency Inversion Principle)**  
+  Las capas superiores no dependen de implementaciones concretas.
+
+Beneficios:
 
 - Bajo acoplamiento.
 - Alta cohesión.
-- Mayor facilidad de mantenimiento.
+- Facilidad de mantenimiento.
 - Escalabilidad futura.
-com/Valentina051506/Ingenieria-web.git
-cd Ingenieria-web
+- Mayor calidad arquitectónica.
