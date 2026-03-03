@@ -98,6 +98,5 @@ Afecta rendimiento y rompe la separación de responsabilidades.
 No se usará:
 
 ```html
-<button onclick="registrar()"
-
+<button onclick="registrar()"```
 no se usara directamente JS embebido directamente en el HTML porque rompe el principio de separación de responsabilidades.   
