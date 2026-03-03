@@ -155,18 +155,5 @@ Esto permite:
 - Alta cohesión.
 - Mayor facilidad de mantenimiento.
 - Escalabilidad futura.
-
----
-
-#  Cómo clonar el proyecto
-
-## Requisitos previos
-
-- Git instalado → https://git-scm.com/downloads
-- Visual Studio Code (opcional)
-
-## Pasos
-
-```bash
-git clone https://github.com/Valentina051506/Ingenieria-web.git
+com/Valentina051506/Ingenieria-web.git
 cd Ingenieria-web
