@@ -1,55 +1,147 @@
-Preguntas Orientadoras
+# Preguntas Orientadoras
 
-1. ¿Cuáles son los componentes esenciales de una aplicación web moderna y cómo se comunican?
+## 1. ¿Cuáles son los componentes esenciales de una aplicación web moderna y cómo se comunican?
 
-- Cliente(FrontEnd): Es lo que ve y usa el usuario, Tecnologías comunes: HTML, CSS y JavaScript, Se ejecuta en el navegador, Envía solicitudes al servidor (por ejemplo, cuando haces clic en un botón).
+Una aplicación web moderna se compone de tres elementos fundamentales:
 
-- Servidor(BackEnd): Procesa la lógica del negocio. Maneja autenticación, reglas, cálculos, etc. Tecnologías comunes: Java, Python, Node.js, PHP, entre otros.
+### Cliente (Frontend)
 
-- Base de datos: Almacena la información (usuarios, productos, mensajes, etc.). Ejemplos: MySQL, PostgreSQL, MongoDB.
+Es la parte visible e interactiva del sistema, con la que el usuario tiene contacto directo.  
+Se ejecuta en el navegador y está desarrollada comúnmente con:
 
-- Comunicacion: Se comunican mediante HTTP/HTTPS. El cliente envía solicitudes (GET, POST, PUT, DELETE) y el servidor responde con datos (usualmente en JSON). Muchas apps usan APIs REST o GraphQL.
+- HTML
+- CSS
+- JavaScript
 
-2. ¿Por qué es necesaria la separación de responsabilidades entre cliente y servidor?
+El frontend se encarga de:
+- Mostrar la información.
+- Capturar acciones del usuario.
+- Enviar solicitudes al servidor (por ejemplo, al hacer clic en un botón o enviar un formulario).
 
-Porque hace el sistema más organizado, seguro y escalable:
+---
 
-- Mantenimiento sencillo: cambios en el frontend no afectan al backend y viceversa.
+### Servidor (Backend)
 
-- Seguridad: la lógica crítica y los datos sensibles quedan en el servidor.
+Es la parte que gestiona la lógica del negocio del sistema.  
 
-- Escalabilidad: se pueden manejar más usuarios sin rehacer todo.
+Se encarga de:
+- Procesar solicitudes.
+- Validar usuarios.
+- Aplicar reglas del sistema.
+- Gestionar seguridad.
+- Comunicarse con la base de datos.
 
-- Reutilización: un mismo backend puede servir a web, móvil o escritorio.
+Tecnologías comunes:
+- Java
+- Python
+- Node.js
+- PHP
 
-- Trabajo en equipo: frontend y backend pueden desarrollarse en paralelo.
+---
 
-3. ¿Cómo facilita HTML5 la creación de contenido web estructurado y accesible?
+### Base de Datos
 
-HTML5 introduce mejoras que hacen la web más clara y usable
+Es el componente encargado de almacenar la información de manera persistente.  
 
-- Permite organizar el contenido con significado, no solo visual
+Ejemplos:
+- MySQL
+- PostgreSQL
+- MongoDB
 
-- Mejora la lectura del código para humanos y máquinas.
+Almacena datos como:
+- Usuarios
+- Registros
+- Mensajes
+- Configuraciones
 
-- Facilita que lectores de pantalla interpreten mejor el contenido.
+---
 
-- Mejora la experiencia para personas con discapacidades
+### Comunicación entre componentes
 
-- Soporte para audio, video, formularios avanzados.
+El cliente y el servidor se comunican mediante el protocolo **HTTP o HTTPS**.
 
-- Mejor integración con dispositivos móviles.
+El flujo general es:
 
-4. ¿Qué ventajas aporta el uso de etiquetas semánticas frente a las tradicionales (como div)
+1. El cliente envía una solicitud (GET, POST, PUT, DELETE).
+2. El servidor procesa la solicitud.
+3. El servidor responde con datos, generalmente en formato JSON.
 
-- Las etiquetas semánticas describen el propósito del contenido, no solo su forma.
+Muchas aplicaciones modernas utilizan:
+- APIs REST
+- GraphQL
 
-<header>, <nav>, <main>, <section>, <article>, <footer>
+Esta estructura permite una comunicación clara, organizada y escalable.
 
-- Mejor SEO: los buscadores entienden mejor la página.
+---
 
-- Mayor accesibilidad: los lectores de pantalla identifican secciones clave.
+## 2. ¿Por qué es necesaria la separación de responsabilidades entre cliente y servidor?
 
-- Código más legible y mantenible.
+La separación entre frontend y backend es esencial porque permite un diseño más organizado, seguro y escalable.
 
-- Estandarización: otros desarrolladores entienden rápido la estructura.
+### Ventajas principales:
+
+- **Mantenimiento más sencillo:**  
+  Los cambios en la interfaz no afectan la lógica del servidor y viceversa.
+
+- **Mayor seguridad:**  
+  La lógica crítica y los datos sensibles permanecen en el servidor.
+
+- **Escalabilidad:**  
+  Se pueden manejar más usuarios optimizando cada capa de forma independiente.
+
+- **Reutilización del backend:**  
+  Un mismo servidor puede ser utilizado por aplicaciones web, móviles o de escritorio.
+
+- **Trabajo en equipo:**  
+  Los desarrolladores frontend y backend pueden trabajar en paralelo sin interferencias.
+
+Esta separación es coherente con la arquitectura en capas aplicada en el proyecto.
+
+---
+
+## 3. ¿Cómo facilita HTML5 la creación de contenido web estructurado y accesible?
+
+HTML5 introduce mejoras que permiten crear contenido más estructurado, claro y accesible.
+
+### Aportes principales:
+
+- Permite organizar el contenido con significado semántico.
+- Mejora la legibilidad del código.
+- Facilita que los motores de búsqueda comprendan la estructura.
+- Mejora la accesibilidad para personas con discapacidad.
+- Soporte nativo para audio y video.
+- Formularios más avanzados.
+- Mejor adaptación a dispositivos móviles.
+
+HTML5 no solo mejora la apariencia del sitio, sino también su estructura lógica y funcional.
+
+---
+
+## 4. ¿Qué ventajas aporta el uso de etiquetas semánticas frente a etiquetas tradicionales como `<div>`?
+
+Las etiquetas semánticas describen el propósito del contenido, no solo su contenedor visual.
+
+Ejemplos de etiquetas semánticas:
+
+- `<header>`
+- `<nav>`
+- `<main>`
+- `<section>`
+- `<article>`
+- `<footer>`
+
+### Ventajas:
+
+- **Mejor SEO:**  
+  Los buscadores entienden mejor la estructura de la página.
+
+- **Mayor accesibilidad:**  
+  Los lectores de pantalla identifican correctamente las secciones del contenido.
+
+- **Código más legible y mantenible:**  
+  La estructura es más clara para otros desarrolladores.
+
+- **Estandarización:**  
+  Se siguen buenas prácticas modernas de desarrollo web.
+
+El uso de etiquetas semánticas mejora tanto la calidad técnica como la experiencia del usuario.
