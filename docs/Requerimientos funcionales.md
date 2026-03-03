@@ -112,6 +112,9 @@
 **Tipo:** Miembro  
 **Prioridad:** Baja  
 **Descripción:** El sistema debe permitir filtrar desacuerdos por estado (abierto, en proceso, resuelto).
+
+---
+
 - Cada módulo tiene una responsabilidad específica (SRP).
 - Posibilidad de extender funcionalidades sin modificar las existentes (OCP).
 - Definición clara de responsabilidades para facilitar mantenibilidad.
