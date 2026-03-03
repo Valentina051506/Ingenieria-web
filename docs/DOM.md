@@ -95,8 +95,7 @@ Afecta rendimiento y rompe la separación de responsabilidades.
 
 ## Inline JavaScript en HTML
 
-No se usará:
+No se usará directamente JS embebido directamente en el HTML porque rompe el principio de separación de responsabilidades.   
 
 ```html
-<button onclick="registrar()"```
-no se usara directamente JS embebido directamente en el HTML porque rompe el principio de separación de responsabilidades.   
+<button onclick="registrar()"
