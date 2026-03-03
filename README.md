@@ -100,7 +100,7 @@ Incluye:
 Definen qué debe hacer el sistema.
 
 Documento:
-[`docs/Requerimientos Funcionales.md`](docs/Requerimientos%20Funcionales.md)
+[`docs/Requerimientos Funcionales.md`](docs/Requerimientos%20funcionales.md)
 
 Incluyen:
 - Registro y autenticación de usuarios.
