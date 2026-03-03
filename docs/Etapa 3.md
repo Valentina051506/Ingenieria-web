@@ -81,3 +81,7 @@ Almacenar la información del sistema de forma segura y estructurada.
 3. Si se requiere almacenamiento o consulta de datos, se accede a la Capa de Acceso a Datos.
 4. La información se obtiene o guarda en la Base de Datos.
 5. La respuesta retorna al usuario siguiendo el mismo flujo inverso.
+
+# ¿Por qué usamos el modelo de arquitectura en capas?
+
+El proyecto adopta una arquitectura en capas porque permite organizar el sistema de manera estructurada, separando responsabilidades y facilitando el mantenimiento y la escalabilidad del software
