@@ -33,7 +33,7 @@ El sistema se desarrolla bajo una **arquitectura en capas (Layered Architecture)
 
 ## Capas del sistema
 
-### 1️ Capa de Presentación
+### 1. Capa de Presentación
 Encargada de la interfaz de usuario y la interacción con los miembros del grupo familiar.
 
 Relacionada con:
@@ -42,7 +42,7 @@ Relacionada con:
 
 ---
 
-### 2️ Capa de Lógica de Negocio
+### 2. Capa de Lógica de Negocio
 Contiene las reglas del sistema:
 - Validación de credenciales.
 - Gestión de grupos.
@@ -57,7 +57,7 @@ Relacionada con:
 
 ---
 
-### 3️ Capa de Acceso a Datos
+### 3. Capa de Acceso a Datos
 Gestiona la persistencia en la base de datos.
 
 Relacionada con:
@@ -67,7 +67,7 @@ Relacionada con:
 
 ---
 
-### 4️ Base de Datos
+### 4. Base de Datos
 Almacena la información del sistema de forma estructurada y segura.
 
 Relacionada con:
